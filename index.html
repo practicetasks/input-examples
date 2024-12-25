@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Range Example</title>
+</head>
+<body>
+<h1>Пример</h1>
+<input type="range" min="-20" max="500" value="15" id="rangeInput">
+<p>Значение: <span id="rangeValue">15</span></p>
+
+<div class="code-box">
+    <p><strong>Код:</strong></p>
+    <pre><code>&lt;input type="range" min="-20" max="500" value="15"&gt;</code></pre>
+</div>
+
+<script>
+    const rangeInput = document.getElementById('rangeInput');
+    const rangeValue = document.getElementById('rangeValue');
+
+    rangeInput.addEventListener('input', function () {
+        rangeValue.textContent = rangeInput.value;
+    });
+</script>
+</body>
+</html>
